@@ -7,7 +7,7 @@ public:
 
         int index =k/ factorial[n-1];
         k %= factorial[n-1];
-
+//Pankajesc
         auto it = nums.begin();
         advance(it, index); // Move iterator to the index
         int num = *it;

@@ -6,7 +6,7 @@ int count(string s,int idx,unordered_map<string,int>umap,vector<int>&dp){
 
     int one=0;
     int two=0;
-
+//Pankajesc
     string takeone=s.substr(idx,1);
     if(umap.find(takeone)!=umap.end()) one=count(s,idx+1,umap,dp);
 
