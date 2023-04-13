@@ -13,7 +13,7 @@ public:
             //if , c[i][0]^x=val                      (1)
             //then c[i][1]^y=k-val                    (2)
             
-            //We can definitely find all possible values of val (0 to k inclusive) 
+            //
             //using a^b=c , then a^c=b
             //from  (1) , we have c[i][0]^val=x;
             //from  (2) , we have c[i][1]^(k-val)=y;
