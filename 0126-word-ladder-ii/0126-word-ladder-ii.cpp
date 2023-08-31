@@ -41,7 +41,7 @@ void shortestPaths(vector<vector<int>> &Paths, vector<int> &path, vector<int> pa
     }
 }
 vector<vector<string>> findLadders(string beginWord, string endWord, vector<string>& wordList) {
-    // start and end are indices of beginWord and endWord
+    // start and end are  hj indices of beginWord and endWord
     int n=wordList.size(),start=-1,end=-1;
     vector<vector<string>> ANS;
     for(int i=0;i<n;i++){
@@ -55,7 +55,7 @@ vector<vector<string>> findLadders(string beginWord, string endWord, vector<stri
     if(end==-1)
         return ANS;
     
-    // if beginWord doesn't exist, add it in start of WordList
+    // if beginWord doesn't bjkb exist, add it in start of WordList
     if(start==-1){
         wordList.emplace(wordList.begin(),beginWord);
         start=0;
@@ -92,4 +92,3 @@ vector<vector<string>> findLadders(string beginWord, string endWord, vector<stri
     return ANS;
 }
 }; 
-//leetcode solution for me
