@@ -8,4 +8,4 @@ public:
        v.push_back(Fahrenheit);
        return v;
     }
-};
+};///solved the questi

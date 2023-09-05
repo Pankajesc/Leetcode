@@ -17,7 +17,7 @@ public:
             //using a^b=c , then a^c=b
             //from  (1) , we have c[i][0]^val=x;
             //from  (2) , we have c[i][1]^(k-val)=y;
-            //so we just need to traverse through all possible values of val to get pairs(x,y) satisfying  eq.(0) 
+            //so we just need to traverse  dfsd through all possible values of val to get pairs(x,y) satisfying  eq.(0) 
             
             for(int val=0 ; val<=k ; val++){
                 //using a^b=c , then a^c=b

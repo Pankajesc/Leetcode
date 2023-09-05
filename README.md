@@ -1,1 +1,2 @@
-# Daily Leetcode Solution 
+# Daily Leetcode Solution
+
