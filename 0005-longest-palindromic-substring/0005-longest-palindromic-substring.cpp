@@ -28,3 +28,4 @@ public:
         return s.substr(starting_index, max_len);
     }
 }; 
+///solved
