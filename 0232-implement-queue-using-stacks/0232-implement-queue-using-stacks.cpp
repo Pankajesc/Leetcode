@@ -1,50 +1,38 @@
+#pragma GCC optimize("O3", "unroll-loops")
 class MyQueue {
+    vector<int> s0, s1;
+    int front=0;
 public:
-stack<int>s1,s2;
     MyQueue() {
         
     }
     
     void push(int x) {
-      s1.push(x);  
+        if (s0.empty()) front=x;
+        s0.push_back(x);
     }
     
     int pop() {
-      while(!s1.empty())  
-      {
-          s2.push(s1.top());
-          s1.pop();
-      }
-      int ans=s2.top();
-      s2.pop();
-      while(!s2.empty())
-      {
-          s1.push(s2.top());
-          s2.pop();
-      }
-      return ans;
+        if (s1.empty()){
+            while(!s0.empty()){
+                int x=s0.back();
+                s0.pop_back();
+                s1.push_back(x);
+            }
+        }
+        int x=s1.back();
+        s1.pop_back();
+        return x;
     }
     
     int peek() {
-        while(!s1.empty())  
-      {
-          s2.push(s1.top());
-          s1.pop();
-      }
-      int ans=s2.top();
-      while(!s2.empty())
-      {
-          s1.push(s2.top());
-          s2.pop();
-      }
-      return ans;
+        if (!s1.empty()){
+            front=s1.back();
+        }
+        return front;
     }
     
     bool empty() {
-        if(s1.empty())
-        {
-            return true;
-        }
-        return false;
+        return s0.empty() && s1.empty();
     }
 };
