@@ -1,12 +1,20 @@
 class Solution {
 public:
-    int majorityElement(vector<int>& arr) {
-        int ele=arr[0];
-        int count=0;
-        for(int i=0;i<arr.size();i++){
-            if(count==0)ele=arr[i];
-            count+=(ele==arr[i])?1:-1;
+    int majorityElement(vector<int>& nums) {
+        int ans = 0;
+        int e = (int)nums.size() / 2;
+        int n = nums.size();
+        while(1){
+            int ind = rand() % n;
+            int cnt = 0;
+            for(auto &x : nums)
+                if(x == nums[ind])
+                {
+                    cnt++;
+                    if(cnt > e)
+                        return nums[ind];
+                }
         }
-        return ele;
+        return ans;
     }
 };
